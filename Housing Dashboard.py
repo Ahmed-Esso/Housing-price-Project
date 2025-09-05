@@ -16,7 +16,7 @@ DEFAULT_PORT = 8060
 # ======== DATA LOADING ========
 def load_data():
     """Load housing data."""
-    df = pd.read_excel(r"G:\file\HousePricePrediction.xlsx")
+    df = pd.read_excel("HousePricePrediction.xlsx")
     # Remove Id column from the dataset
     if 'Id' in df.columns:
         df = df.drop('Id', axis=1)
@@ -512,4 +512,5 @@ def update_additional_graphs(zoning, bldgtype, theme):
 
 # ======== APP ENTRY POINT ========
 if __name__ == '__main__':
+
     app.run(debug=True, port=DEFAULT_PORT)  # Run app in debug mode
